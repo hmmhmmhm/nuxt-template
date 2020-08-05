@@ -24,26 +24,12 @@ export default {
     build: {
         postcss: {
             plugins: {
-                'postcss-import': {},
-                tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
-                'postcss-nested': {}
+                'tailwindcss': path.resolve('./client/tailwind.config.js'),
             }
-        },
-        preset: {
-            stage: 1
         }
     },
     buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],
-    tailwindcss: {
-        configPath: '~/config/tailwind.config.js',
-        cssPath: '~/assets/css/tailwind.css',
-        exposeConfieg: false
-    },
-    modules: ['@nuxtjs/axios', 'nuxt-purgecss'],
-    purgeCSS: {
-        mode: 'postcss',
-        enabled: (process.env.NODE_ENV === 'production')
-    },
+    modules: ['@nuxtjs/axios'],
     axios: {},
     plugins: ['~/plugins/composition-api']
 }
