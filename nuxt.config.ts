@@ -1,6 +1,7 @@
-const path = require('path');
+import type { NuxtConfig } from '@nuxt/types'
+import path from 'path'
 
-export default {
+const nuxtConfig: NuxtConfig = {
     srcDir: './client',
     env: {},
     head: {
@@ -21,15 +22,14 @@ export default {
     },
     loading: { color: '#3B8070' },
     css: ['~/assets/css/main.css'],
-    build: {
-        postcss: {
-            plugins: {
-                'tailwindcss': path.resolve('./client/tailwind.config.js'),
-            }
-        }
-    },
     buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],
     modules: ['@nuxtjs/axios'],
     axios: {},
-    plugins: ['~/plugins/composition-api']
+    plugins: ['~/plugins/composition-api'],
+    tailwindcss: {
+        configPath: '~/config/tailwind.config.js',
+        cssPath: '~/assets/css/tailwind.css',
+        exposeConfig: true
+    }
 }
+export default nuxtConfig
