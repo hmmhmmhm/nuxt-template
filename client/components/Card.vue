@@ -15,23 +15,14 @@
 <script lang="ts">
     import type { Person } from '../types'
     import Vue from 'vue'
-<<<<<<< HEAD:components/Card.vue
 
     export default Vue.extend({
         props: {
             person: Object as () => Person,
-=======
-    
-    export default Vue.extend({
-        props: {
-            person: {
-                type: undefined
-            }
->>>>>>> 3d4400fe7db2b7dcc5da5419cb1309ff28b60422:client/components/Card.vue
         },
         created() {
-            console.log(this.person);
-        }
+            console.log(this.person)
+        },
     })
 </script>
 
