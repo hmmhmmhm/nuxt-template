@@ -1,6 +1,9 @@
 import type { NuxtConfig } from '@nuxt/types'
 import path from 'path'
 
+// * Hide ExperimentalWarning
+process.removeAllListeners('warning')
+
 const nuxtConfig: NuxtConfig | {
     build: {
         postcss: any
