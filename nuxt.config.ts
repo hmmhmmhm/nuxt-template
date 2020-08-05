@@ -27,7 +27,7 @@ const nuxtConfig: NuxtConfig | {
     build: {
         postcss: {
             plugins: {
-                'tailwindcss': path.resolve('./client/tailwind.config.js'),
+                'tailwindcss': path.resolve('./client/config/tailwind.config.js'),
             }
         }
     },
