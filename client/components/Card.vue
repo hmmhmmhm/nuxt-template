@@ -15,12 +15,16 @@
 <script lang="ts">
     import type { Person } from '../types'
     import Vue from 'vue'
-    import { PropOptions } from 'vue'
     
     export default Vue.extend({
         props: {
-            person: undefined,
+            person: {
+                type: undefined
+            }
         },
+        created() {
+            console.log(this.person);
+        }
     })
 </script>
 
