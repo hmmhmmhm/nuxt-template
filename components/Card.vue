@@ -13,13 +13,15 @@
 </template>
 
 <script lang="ts">
-    import { Component, Prop, Vue } from 'nuxt-property-decorator'
     import type { Person } from '../types'
-
-    @Component({})
-    export default class Card extends Vue {
-        @Prop() person!: Person
-    }
+    import Vue from 'vue'
+    import { PropOptions } from 'vue'
+    
+    export default Vue.extend({
+        props: {
+            person: undefined,
+        },
+    })
 </script>
 
 <style scoped>
