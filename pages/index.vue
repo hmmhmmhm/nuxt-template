@@ -12,19 +12,29 @@
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'nuxt-property-decorator'
-    import { State } from 'vuex-class'
+    // import { Component, Vue } from 'nuxt-property-decorator'
+    // import { State } from 'vuex-class'
+    import Vue from 'vue'
     import type { Person } from '../types'
     import Card from '~/components/Card.vue'
 
-    @Component({
+    // @Component({
+    //     components: {
+    //         Card,
+    //     },
+    // })
+    // export default class extends Vue {
+    //     @State people!: Person[]
+    // }
+
+    export default Vue.extend({
         components: {
             Card,
         },
+        data: {
+            people: undefined,
+        },
     })
-    export default class extends Vue {
-        @State people!: Person[]
-    }
 </script>
 
 <style scoped>
