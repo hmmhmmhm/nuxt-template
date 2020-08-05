@@ -1,35 +1,19 @@
-import type { MutationTree, ActionTree, ActionContext } from 'vuex'
-import type { Context as AppContext } from '@nuxt/types'
-import type { RootState, Person } from '~/types'
-import localRandomData from '~/static/random-data.json'
+import type { MutationTree } from 'vuex'
+import type { RootState, Actions } from '~/types'
 
 export const state = (): RootState => ({
+    // * 여기에 상태들을 정의합니다.
     people: [],
 })
 
 export const mutations: MutationTree<RootState> = {
-    setPeople(state: RootState, people: Person[]): void {
-        state.people = people
-    },
-}
-
-interface Actions<S, R> extends ActionTree<S, R> {
-    nuxtServerInit(
-        actionContext: ActionContext<S, R>,
-        appContext: AppContext
-    ): void
+    // * 여기에 뮤테이션들을 정의합니다.
 }
 
 export const actions: Actions<RootState, RootState> = {
-    
+    // * 여기에 액션들을 정의합니다.
+
     async nuxtServerInit({ commit }, context) {
-        let people: Person[] = []
-
-        // If you serve the site statically with `nuxt generate`, you can't use HTTP requests for local
-        people = context.isStatic
-            ? localRandomData
-            : await context.app.$axios.$get('./random-data.json')
-
-        commit('setPeople', people.slice(0, 10))
+        // * 여기에 최초 초기화 액션을 정의합니다.
     },
 }
