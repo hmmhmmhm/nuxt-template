@@ -22,19 +22,19 @@
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'nuxt-property-decorator'
-    import { State } from 'vuex-class'
+    import * as VueAPI from '@vue/composition-api'
     import type { Person } from '../types'
-    import Card from '~/components/Card.vue';
+    import Card from '~/components/Card.vue'
 
-    @Component({
+    export default VueAPI.defineComponent({
         components: {
             Card,
         },
+        setup(props, context) {
+            const people = VueAPI.reactive<Person[]>([])
+            return { people }
+        },
     })
-    export default class extends Vue {
-        @State people!: Person[]
-    }
 </script>
 
 <style lang="postcss" scoped>

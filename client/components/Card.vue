@@ -13,15 +13,15 @@
 </template>
 
 <script lang="ts">
+    import * as VueAPI from '@vue/composition-api'
     import type { Person } from '../types'
-    import Vue from 'vue'
 
-    export default Vue.extend({
+    export default VueAPI.defineComponent({
         props: {
             person: Object as () => Person,
         },
-        created() {
-            console.log(this.person)
+        setup(props, context) {
+            console.log(props.person)
         },
     })
 </script>
