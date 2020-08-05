@@ -28,4 +28,5 @@ export default {
     },
     modules: ['@nuxtjs/axios'],
     axios: {},
+    plugins: ['~/plugins/composition-api']
 }

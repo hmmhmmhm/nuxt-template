@@ -12,27 +12,17 @@
 </template>
 
 <script lang="ts">
-    // import { Component, Vue } from 'nuxt-property-decorator'
-    // import { State } from 'vuex-class'
-    import Vue from 'vue'
-    import type { Person } from '../types'
+    import * as VueAPI from '@vue/composition-api'
+    import type { Person } from '../client/types'
     import Card from '~/components/Card.vue'
 
-    // @Component({
-    //     components: {
-    //         Card,
-    //     },
-    // })
-    // export default class extends Vue {
-    //     @State people!: Person[]
-    // }
-
-    export default Vue.extend({
+    export default VueAPI.defineComponent({
         components: {
             Card,
         },
-        data: {
-            people: undefined,
+        setup(props, context) {
+            const people = VueAPI.reactive<Person[]>([])
+            return { people }
         },
     })
 </script>
