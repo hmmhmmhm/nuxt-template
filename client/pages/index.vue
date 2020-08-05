@@ -6,7 +6,7 @@
 
 <script lang="ts">
     // import * as VueAPI from '@vue/composition-api'
-    import aa from '~/index'
+    import { VueAPI } from '~/index'
     import Card from '~/components/Card.vue'
     import type {} from '~/types'
 
