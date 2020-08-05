@@ -1,4 +1,5 @@
 export default {
+    srcDir: './client',
     env: {},
     head: {
         title: 'nuxt-template',
@@ -19,7 +20,12 @@ export default {
     loading: { color: '#3B8070' },
     css: ['~/assets/css/main.css'],
     build: {},
-    buildModules: ['@nuxt/typescript-build'],
+    buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss'],
+    tailwindcss: {
+        configPath: '~/config/tailwind.config.js',
+        cssPath: '~/assets/css/tailwind.css',
+        exposeConfieg: false
+    },
     modules: ['@nuxtjs/axios'],
     axios: {},
 }

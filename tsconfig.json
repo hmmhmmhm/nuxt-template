@@ -19,7 +19,7 @@
     "importsNotUsedAsValues": "preserve",
     "paths": {
       "~/*": [
-        "./*"
+        "./client/*"
       ]
     },
     "types": [
