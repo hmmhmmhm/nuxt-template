@@ -1,2 +1,3 @@
 import * as VueAPI from '@vue/composition-api'
-export { VueAPI }
+import * as Vuex from 'vuex-module-decorators'
+export { VueAPI, Vuex }

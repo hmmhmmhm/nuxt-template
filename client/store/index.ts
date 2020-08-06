@@ -1,19 +1,6 @@
-import type { MutationTree } from 'vuex'
-import type { RootState, Actions } from '~/types'
+import { Store } from 'vuex';
+import { init } from '~/core/store-accessor';
 
-export const state = (): RootState => ({
-    // * 여기에 상태들을 정의합니다.
-    people: [],
-})
-
-export const mutations: MutationTree<RootState> = {
-    // * 여기에 뮤테이션들을 정의합니다.
-}
-
-export const actions: Actions<RootState, RootState> = {
-    // * 여기에 액션들을 정의합니다.
-
-    async nuxtServerInit({ commit }, context) {
-        // * 여기에 최초 초기화 액션을 정의합니다.
-    },
-}
+const initializer = (store: Store<any>) => init(store);
+export const plugins = [initializer];
+export * from '~/core/store-accessor';
