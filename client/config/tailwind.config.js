@@ -9,13 +9,13 @@ module.exports = {
   variants: {},
   plugins: [],
   purge: {
-    enabled: false,
+    enabled: true,
     content: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.ts',
-      'mixins/**/*.ts'
+      './components/**/*.vue',
+      './layouts/**/*.vue',
+      './pages/**/*.vue',
+      './plugins/**/*.ts',
+      './mixins/**/*.ts'
     ]
   }
 }

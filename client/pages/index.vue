@@ -14,7 +14,7 @@
             Card,
         },
         setup(props, context) {
-            exampleStore
+            console.log(exampleStore.increment(5));
             return {}
         },
     })

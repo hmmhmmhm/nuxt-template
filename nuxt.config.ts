@@ -45,14 +45,15 @@ const nuxtConfig: NuxtConfig | {
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
     build: {
-        postcss: {
-            plugins: {
-                'tailwindcss': path.resolve('./client/config/tailwind.config.js'),
-            }
-        }
+        // postcss: {
+        //     plugins: {
+        //         'tailwindcss': path.resolve('./client/config/tailwind.config.js'),
+        //     }
+        // },
+        analyze: true
     },
     loading: { color: '#3B8070' },
-    css: ['~/assets/css/main.css'],
+    // css: [], //'~/assets/css/main.css'
     buildModules: ['@nuxt/typescript-build', '@nuxtjs/tailwindcss', '@nuxtjs/pwa'],
     modules: ['@nuxtjs/axios'],
     axios: {},

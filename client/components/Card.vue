@@ -27,14 +27,14 @@
     import * as VueAPI from '@vue/composition-api'
     export default VueAPI.defineComponent({
         setup(props, context) {
-            // *
+
         },
     })
 </script>
 
 <style lang="postcss" scoped>
     .badge {
-        @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700;
+        @apply inline-block bg-black rounded-full px-3 py-1 text-sm font-semibold text-gray-700;
         &:hover {
             @apply bg-gray-300;
         }

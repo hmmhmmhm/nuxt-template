@@ -1,6 +1,10 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
 
-@Module({ name: 'example' })
+@Module({ 
+  name: 'example',
+  stateFactory: true,
+  namespaced: true,
+})
 export default class example extends VuexModule {
   count = 0
 
