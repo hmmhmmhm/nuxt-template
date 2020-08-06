@@ -7,7 +7,7 @@
 <script lang="ts">
     import { VueAPI } from '~/core'
     import { Card } from '~/components'
-    import { exampleStore } from '~/store';
+    import { exampleStore } from '~/store'
 
     export default VueAPI.defineComponent({
         components: {

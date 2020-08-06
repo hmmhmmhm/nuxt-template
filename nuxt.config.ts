@@ -4,10 +4,6 @@ import path from 'path'
 // * ExperimentalWarning 오류를 숨깁니다.
 process.removeAllListeners('warning')
 
-// * 내부 개발 모드 여부가 담깁니다.
-const isDevelopmentMode = process.env.NODE_ENV !== 'production'
-console.log(`isDevelopmentMode: `, isDevelopmentMode)
-
 // * 매 빌드마다 버전이 자동으로 색인됩니다.
 const cacheVersion = `_${Math.floor(+ new Date() / 1000)}`
 

@@ -13,8 +13,7 @@
     },
     "scripts": {
         "dev": "nuxt-ts",
-        "build": "nuxt-ts build --no-warnings",
-        "t": "node \"nuxt-ts build --no-warnings\"",
+        "build": "nuxt-ts build",
         "start": "nuxt-ts start",
         "generate": "nuxt-ts build --target static && nuxt-ts export",
         "lint": "prettier --write \"./**/*.{ts,vue}\"",
