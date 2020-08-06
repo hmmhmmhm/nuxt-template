@@ -9,4 +9,9 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# Nuxt PWA
+sw.*
+
+# Mac
 .DS_Store
